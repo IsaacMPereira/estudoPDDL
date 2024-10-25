@@ -1,0 +1,12 @@
+(define (domain helloWorld)
+	(:predicates
+		predicate1
+		predicate2
+		predicate3
+	)
+	(:action
+		action1
+		action2
+		action3
+	)
+)
