@@ -11,7 +11,7 @@
         ; :parameters (?s - sala)
         :precondition (fora-sala ?s)
         :effect (and (not(fora-sala ?s)) (luz-ligada ?ll))
-        ; :effect (and (not(fora-sala ?s)))
+        ; :effect (and (not(fora-sala ?s))) ;Isso não funciona
     )
     (:action desligar-luz
         :parameters (?ll - interruptor ?ld - interruptor)
