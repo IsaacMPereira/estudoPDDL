@@ -4,8 +4,8 @@
     (:predicates
         (garrafa-chao ?g - garrafa)
         (tampa-chao ?t - tampa)
-        (garrafa-mesa ?g - garrafa ?m - mesa)
-        (tampa-mesa ?t - tampa ?m - mesa)
+        (Ngarrafa-mesa ?g - garrafa ?m - mesa)
+        (Ntampa-mesa ?t - tampa ?m - mesa)
         (tampada ?g - garrafa ?t -tampa)
     )
     (:action PEGAR
@@ -13,15 +13,15 @@
         :precondition (and (garrafa-chao ?g) (tampa-chao ?t) )
         :effect (and (not(garrafa-chao ?g)) 
                  (not(tampa-chao ?t)) 
-                 (not(garrafa-mesa ?g ?m)) 
-                 (not(tampa-mesa ?t ?m)) )
+                 (Ngarrafa-mesa ?g ?m)
+                 (Ntampa-mesa ?t ?m) )
     )
     (:action COLOCAR-NA-MESA
         :parameters (?g - garrafa ?t - tampa ?m - mesa)
-        :precondition (and (not(garrafa-mesa ?g ?m)) 
-                       (not(tampa-mesa ?t ?m)) )
-        :effect (and (garrafa-mesa ?g ?m) 
-                 (tampa-mesa ?t ?m) 
+        :precondition (and (Ngarrafa-mesa ?g ?m) 
+                       (Ntampa-mesa ?t ?m) )
+        :effect (and (not(Ngarrafa-mesa ?g ?m)) 
+                 (not(Ntampa-mesa ?t ?m)) 
                  (not(tampada ?g)) )
     )
     (:action TAMPAR
