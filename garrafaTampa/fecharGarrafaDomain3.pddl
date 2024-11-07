@@ -9,7 +9,7 @@
         (tampada ?g - garrafa ?t -tampa)
     )
     (:action PEGAR
-        :parameters (?g - garrafa ?t - tampa)
+        :parameters (?g - garrafa ?t - tampa ?m - mesa)
         :precondition (and (garrafa-chao ?g) (tampa-chao ?t) )
         :effect (and (not(garrafa-chao ?g)) 
                  (not(tampa-chao ?t)) 
