@@ -10,7 +10,7 @@
         (destampada ?g - garrafa)
         (tampada-com ?g - garrafa ?t - tampa)
     )
-    (:action PEGAR
+    (:action COLOCAR-NA-MESA
         :parameters (?g - garrafa ?t - tampa ?m - mesa)
         :precondition (and (garrafa-chao ?g) 
                        (tampa-chao ?t) 
